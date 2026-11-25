@@ -19,7 +19,7 @@ jobs:
         run: ls -la
 
   validation:
-    name: ✅ Validação
+    name: Validação
     runs-on: ubuntu-latest
     needs: setup
 
@@ -35,10 +35,10 @@ jobs:
           fi
 
       - name: Validação concluída
-        run: echo "Arquivo OK ✅"
+        run: echo "Arquivo OK"
 
   build:
-    name: 🏗 Build (simulado)
+    name: Build (simulado)
     runs-on: ubuntu-latest
     needs: validation
 
@@ -55,10 +55,10 @@ jobs:
         run: ls -la dist
 
   deploy:
-    name: 🚀 Deploy (informativo)
+    name: Deploy (informativo)
     runs-on: ubuntu-latest
     needs: build
 
     steps:
       - name: Deploy
-        run: echo "Cloudflare fará deploy automaticamente"
+        run: echo "Cloudflare deploy automaticamente"
